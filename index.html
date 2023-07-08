@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog site | Vue.js</title>
+  <link rel="stylesheet" type="text/css" href="./reset.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+  <script src="./Tweet.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div id="app" class="app-container">
+    <div class="hcontainer">
+      <h1>Blog site | Vue.js </h1>
+    </div>
+    <div class="user">
+      <div class="user-information">
+        <div class="image-container">
+          <img class="avatar" src="./assets/codegirl.jpg" alt="profile picture">
+        </div>
+        <p>{{ username }}</p>
+      </div>
+      <div class="user-bio" v-if="bio">
+        <h2><b>Bio: </b> {{ bio }} </h2>
+      </div>
+    </div>
+    <div class="tweets">
+      <tweet v-for="tweet in tweets" 
+             v-bind:message="tweet"
+             v-bind:author="username"></tweet>
+    </div>
+    <div class="settings">
+      <h2>Settings</h2>
+      <label for="username">Username</label>
+      <input type="text" value="username" placeholder="Username" v-model="username" />
+      <label for="bio">Bio</label>
+      <textarea value="bio" placeholder="Bio" v-model="bio"></textarea>
+      <label for="tweet">New Tweet</label>
+      <div class="new-tweet">
+        <input type="text" value="tweet" placeholder="New Tweet" v-model="newTweet" />
+        <button v-on:click="tweets.push(newTweet)">Add Tweet</button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="input-data"></div>
+      <input type="text">
+      <label>Name</label>
+    </div>
+  </div>
+</body>
+</html>

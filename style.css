@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--fontcolor);
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+:root {
+    --primaryBlack: rgb(15, 14, 14);
+    --primaryGraey: rgb(229, 219, 219);
+    --primaryWhite:rgb(244, 250, 250);
+    --purple:#5919d9;
+    --lightPuple: #e9ecfc;
+
+}
+
+.hcontainer {
+    display: block; 
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    color: var(--primaryWhite);
+    background-color: var(--purple);
+    font-size: 42px;
+    padding: 20px;
+}
+
+h2 {
+    color: var(--primaryBlack);
+}
+
+h3 {
+    color: var(--fontcolor);
+    background-color: var(--backgroundcolor);
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+}
+
+.app-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .app-container  {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.user {
+    background-color: var(--lightPuple);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 2rem;
+}
+
+.user-information{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 30px;
+    width: 100%;
+    background-color: var(--lightPuple);
+}
+
+.new-tweet {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+}
+
+.tweet {
+    border: var(--lightPuple) 2px solid;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-items: flex-start;
+    padding: 2rem;
+    margin: .5rem;
+}
+
+@media (min-width: 1024px) {
+    .tweet  {
+        border: var(--lightPuple) 2px solid;
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        margin: .5rem 0;
+    }
+}
+
+/* Wrapper with input, settings */
+
+.settings {
+    background-color: var(--lightPuple);
+  }
+  
+  .settings h2 {
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .settings label {
+    color: rgb(57, 14, 121);
+    
+  }
+  
+  .settings input[type="text"] {
+    color: rgb(185, 99, 19);
+  }
+  
+  .settings textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;
+    padding: 10px;
+  }
+  
+  .settings .new-tweet {
+    /* Styles for the "new-tweet" div */
+  }
+  
+  .settings .new-tweet input[type="text"] {
+    /* Styles for the text input within the "new-tweet" div */
+  }
+  
+  .settings .new-tweet button {
+   border-radius: 20px;
+   padding: 10px;
+   border: none;
+   color: var(--primaryWhite);
+   background-color: var(--purple);
+  }
