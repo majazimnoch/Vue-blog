@@ -93,7 +93,6 @@ h3 {
 .new-tweet {
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
 }
 
 .tweet {
