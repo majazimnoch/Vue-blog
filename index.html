@@ -11,17 +11,17 @@
 <body>
   <div id="app" class="app-container">
     <div class="hcontainer">
-      <h1>Blog site | Vue.js </h1>
+      <h1>Summer time blog ⛱ | Vue.js </h1>
     </div>
     <div class="user">
       <div class="user-information">
         <div class="image-container">
-          <img class="avatar" src="./assets/codegirl.jpg" alt="profile picture">
+          <img class="avatar" src="./assets/summer-girl.jpg" alt="profile picture">
         </div>
-        <p>{{ username }}</p>
       </div>
       <div class="user-bio" v-if="bio">
-        <h2><b>Bio: </b> {{ bio }} </h2>
+        <h2>{{ username }}</h2>
+        <p><b>Bio: </b> {{ bio }} </p>
       </div>
     </div>
     <div class="tweets">
@@ -32,19 +32,12 @@
     <div class="settings">
       <h2>Settings</h2>
       <label for="username">Username</label>
-      <input type="text" value="username" placeholder="Username" v-model="username" />
+      <input type="text" class="name-input" value="username" placeholder="Username" v-model="username" />
       <label for="bio">Bio</label>
       <textarea value="bio" placeholder="Bio" v-model="bio"></textarea>
       <label for="tweet">New Tweet</label>
-      <div class="new-tweet">
-        <input type="text" value="tweet" placeholder="New Tweet" v-model="newTweet" />
-        <button v-on:click="tweets.push(newTweet)">Add Tweet</button>
-      </div>
-    </div>
-    <div class="wrapper">
-      <div class="input-data"></div>
-      <input type="text">
-      <label>Name</label>
+      <input type="text" class="tweet-input" value="tweet" placeholder="New Tweet" v-model="newTweet" />
+      <button v-on:click="tweets.push(newTweet)">Add Tweet</button>
     </div>
   </div>
 </body>
