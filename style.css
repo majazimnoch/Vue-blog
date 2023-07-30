@@ -4,15 +4,16 @@
     box-sizing: border-box;
     color: var(--fontcolor);
     font-family: var(--fontParagraph);
+
    
 }
 
 :root {
-    --primaryBlack: #FCFAFA;
-    --primaryGray: #F0D78C;
-    --primaryWhite:#f9d66c;
-    --purple:#2d69bc;
-    --lightPuple:#9ddaf4;
+    --primaryBlack: #281f1e;
+    --primaryGray: #5f8f95;
+    --primaryWhite:#fefaf6;
+    --purple:rgb(250, 192, 66);
+    --lightPuple:#8e68df;
     --fontParagraph: Quicksand;
 }
 
@@ -36,12 +37,22 @@ h1 {
 }
 
 h2 {
-    color: var(--primaryBlack);
+    color: var(--purple);
 }
 
 h3 {
-    color: var(--fontcolor);
+    color: var(--primaryBlack);
     background-color: var(--backgroundcolor);
+}
+
+.biop {
+    color: var(--primaryWhite);
+    background-color: var(--backgroundcolor);
+}
+
+label[for="tweet"],
+.tweet-input {
+  color: red; /* Change this to the desired color */
 }
 
 .avatar {
@@ -167,12 +178,37 @@ h3 {
     padding: 10px;
   }
   
+   .settings .wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .settings button {
-   border-radius: 20px;
-   padding: 10px 30px;
-   border: none;
-   color: var(--primaryWhite);
-   background-color: var(--purple);
+    width: 140px;
+    height: 45px;
+    font-family: var(--fontParagraph);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: var(--primaryWhite);
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1rem;
+    }
+  
+  button:hover {
+    background-color: var(--primaryGray);
+    box-shadow: 0px 15px 20px rgba(250, 192, 66, 0.4);
+    color: var(--primaryWhite);
+    transform: translateY(-7px);
   }
 
   @media (max-width: 667px) {

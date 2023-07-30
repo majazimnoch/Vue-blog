@@ -21,7 +21,7 @@
       </div>
       <div class="user-bio" v-if="bio">
         <h2>{{ username }}</h2>
-        <p><b>Bio: </b> {{ bio }} </p>
+        <p class="biop"><b>Bio: </b> {{ bio }} </p>
       </div>
     </div>
     <div class="tweets">
@@ -31,13 +31,15 @@
     </div>
     <div class="settings">
       <h2>Settings</h2>
-      <label for="username">Username</label>
+      <h2><label for="username">Username</label></h2>
       <input type="text" class="name-input" value="username" placeholder="Username" v-model="username" />
       <label for="bio">Bio</label>
       <textarea value="bio" placeholder="Bio" v-model="bio"></textarea>
       <label for="tweet">New Tweet</label>
       <input type="text" class="tweet-input" value="tweet" placeholder="New Tweet" v-model="newTweet" />
-      <button v-on:click="tweets.push(newTweet)">Add Tweet</button>
+      <div class="wrap">
+        <button v-on:click="tweets.push(newTweet)">Add Tweet</button>
+      </div>
     </div>
   </div>
 </body>
