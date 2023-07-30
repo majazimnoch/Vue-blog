@@ -3,20 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     color: var(--fontcolor);
-    font-family: var(--fontParagraph);
-
-   
+    font-family: var(--fontParagraph);   
 }
 
 :root {
     --primaryBlack: #281f1e;
     --primaryGray: #5f8f95;
     --primaryWhite:#fefaf6;
-    --purple:rgb(250, 192, 66);
-    --lightPuple:#8e68df;
+    --orange:rgb(250, 192, 66);
+    --purple:#8e68df;
     --fontParagraph: Quicksand;
 }
 
+/* font in the folder */
 @font-face {
     font-family: Quicksand;
     font-weight: ExtraLight;
@@ -31,28 +30,24 @@
 
 h1 {
     color: var(--primaryWhite);
-    background-color: var(--purple);
+    background-color: var(--orange);
     font-size: 42px;
     padding: 20px;
 }
 
 h2 {
-    color: var(--purple);
+    color: var(--orange);
 }
 
 h3 {
-    color: var(--primaryBlack);
-    background-color: var(--backgroundcolor);
-}
-
-.biop {
     color: var(--primaryWhite);
-    background-color: var(--backgroundcolor);
+    background-color: var(--primaryGray);
+    padding: 3px;
 }
 
 label[for="tweet"],
 .tweet-input {
-  color: red; /* Change this to the desired color */
+  color: var(--primaryBlack)
 }
 
 .avatar {
@@ -81,7 +76,7 @@ label[for="tweet"],
 }
 
 .user {
-    background-color: var(--lightPuple);
+    background-color: var(--purple);
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -112,7 +107,7 @@ label[for="tweet"],
     gap: 1rem 0;
     padding: 30px;
     width: 100%;
-    background-color: var(--lightPuple);
+    background-color: var(--purple);
 }
 
 .new-tweet {
@@ -122,7 +117,7 @@ label[for="tweet"],
 }
 
 .tweet {
-    border: var(--lightPuple) 2px solid;
+    border: var(--purple) 2px solid;
     gap: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -135,7 +130,7 @@ label[for="tweet"],
 
 @media (min-width: 1024px) {
     .tweet  {
-        border: var(--lightPuple) 2px solid;
+        border: var(--purple) 2px solid;
         gap: 1.5rem;
         display: flex;
         flex-direction: column;
@@ -146,25 +141,25 @@ label[for="tweet"],
 
 /* Wrapper with input, settings */
   
-  .settings h2 {
-  }
-  
+
   .settings label {
-    color: rgb(57, 14, 121);
-    
+    color: var(--primaryWhite);
+    font-size: medium;
+    font-weight: 400;
   }
   
   .settings input[type="text"] {
-    color: rgb(185, 99, 19);
+    color: var(--primaryGray);
   }
-  
-  .settings textarea {
-    max-width: 100%;
-    min-width: 100%;
-    min-height: 50px;
-    padding: 10px;
+
+  .settings textarea[type="text"] {
+    color: var(--primaryGray);
   }
-  
+
+  .settings .tweet-input::placeholder {
+    color: var(--primaryGray);
+ }
+
   .settings .name-input {
     max-width: 100%;
     min-width: 100%;
@@ -174,8 +169,21 @@ label[for="tweet"],
     .settings .tweet-input {
     max-width: 100%;
     min-width: 100%;
-    min-height: 50px;
-    padding: 10px;
+    min-height: 100px;
+    padding: 20px 10px;
+    color: var(--primaryGray);
+  }
+
+  .settings input:focus {
+    outline: none !important;
+    border:1px solid var(--primaryGray);
+    box-shadow: 0 0 10px var(--primaryWhite);
+  }
+
+  .settings textarea:focus {
+    outline: none !important;
+    border:1px solid var(--primaryGray);
+    box-shadow: 0 0 10px var(--primaryWhite);
   }
   
    .settings .wrap {
@@ -205,8 +213,8 @@ label[for="tweet"],
     }
   
   button:hover {
-    background-color: var(--primaryGray);
-    box-shadow: 0px 15px 20px rgba(250, 192, 66, 0.4);
+    background-color: var(--orange);
+    box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.187);
     color: var(--primaryWhite);
     transform: translateY(-7px);
   }

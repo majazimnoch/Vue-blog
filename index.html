@@ -16,7 +16,7 @@
     <div class="user">
       <div class="user-information">
         <div class="image-container">
-          <img class="avatar" src="./assets/summer-girl.jpg" alt="profile picture">
+          <img class="avatar" src="./assets/summer-me.jpg" alt="profile picture">
         </div>
       </div>
       <div class="user-bio" v-if="bio">
@@ -29,14 +29,17 @@
              v-bind:message="tweet"
              v-bind:author="username"></tweet>
     </div>
+    <!-- input: Depending on the type attribute, it can appear as a single-line text box, a password field (where the characters are obscured), a numeric input, a checkbox, a radio button, etc.
+    
+    textarea: It typically appears as a larger box that allows users to input multiple lines of text. -->
     <div class="settings">
       <h2>Settings</h2>
       <h2><label for="username">Username</label></h2>
       <input type="text" class="name-input" value="username" placeholder="Username" v-model="username" />
       <label for="bio">Bio</label>
-      <textarea value="bio" placeholder="Bio" v-model="bio"></textarea>
+      <input type="text" class="name-input" value="bio" placeholder="Bio" v-model="bio"></input>
       <label for="tweet">New Tweet</label>
-      <input type="text" class="tweet-input" value="tweet" placeholder="New Tweet" v-model="newTweet" />
+      <textarea type="text" class="tweet-input" value="tweet" placeholder="New Tweet" v-model="newTweet"></textarea>
       <div class="wrap">
         <button v-on:click="tweets.push(newTweet)">Add Tweet</button>
       </div>
