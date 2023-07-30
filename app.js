@@ -4,9 +4,9 @@ const app = new Vue({
       username: 'Maja',
       newTweet: '',
       tweets: [
-        "I graduated from Web Development Bootcamp! Huray! Now I can take some days off and relax.",
-        "On my first week of summer I went to my family's summer house nearby sea. All I was thinking about was this new framework, Vue.",
-        "So I was taking my computer to the beach and I was coding. I made my first blog page using Vue! I got this."
+        "I graduated from the Web Development Bootcamp! Hurray! Now I can take some days off and relax.",
+        "During my first week of summer, I went to my family's summer house by the sea. All I could think about was this new framework, Vue",
+        "So I took my computer to the beach and started coding. I made my first blog page using Vue! I'm excited about it."
       ],
       bio: 'Excited front-end developer, currently enjoying her summer break.'
     }
